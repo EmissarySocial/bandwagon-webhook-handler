@@ -43,7 +43,7 @@ func create(downloadsFolder string, stream mapof.Any) queue.Result {
 
 	// For each track in the album, download the primary attachment file
 	counter := 1
-	for track := range collections.NewIterator(tracks) {
+	for track := range collections.RangeDocuments(tracks) {
 
 		// Only process audio tracks (why would anything else be in an album?)
 		if track.Type() != vocab.ObjectTypeAudio {
