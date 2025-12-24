@@ -24,15 +24,15 @@ func PostPage(args config.CommandLineArgs, q *queue.Queue) echo.HandlerFunc {
 		switch data.GetString("type") {
 
 		case "Create":
-			q.Enqueue <- queue.NewTask("Create", data.GetMap("object"))
+			q.NewTask("Create", data.GetMap("object"))
 			return ctx.NoContent(200)
 
 		case "Update":
-			q.Enqueue <- queue.NewTask("Update", data.GetMap("object"))
+			q.NewTask("Update", data.GetMap("object"))
 			return ctx.NoContent(200)
 
 		case "Delete":
-			q.Enqueue <- queue.NewTask("Delete", data.GetMap("object"))
+			q.NewTask("Delete", data.GetMap("object"))
 			return ctx.NoContent(200)
 
 		}
