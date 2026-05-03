@@ -3,12 +3,12 @@ module github.com/EmissarySocial/bandwagon-webhook-handler
 go 1.24.1
 
 require (
-	github.com/benpate/derp v0.34.0
+	github.com/benpate/derp v0.35.0
 	github.com/benpate/digital-dome v0.2.10
 	github.com/benpate/domain v0.2.9
 	github.com/benpate/hannibal v0.14.4
-	github.com/benpate/remote v0.17.10
-	github.com/benpate/rosetta v0.25.25
+	github.com/benpate/remote v0.18.0
+	github.com/benpate/rosetta v0.25.26
 	github.com/benpate/turbine v0.4.3
 	github.com/labstack/echo/v4 v4.13.4
 	github.com/rs/zerolog v1.34.0
